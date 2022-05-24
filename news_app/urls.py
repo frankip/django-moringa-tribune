@@ -6,6 +6,6 @@ from news_app.views import hello_world, hello_world2
 # import views
 urlpatterns = [
     path('', hello_world, name="home"),
-    path('hello/', hello_world2, name="home")
+    path('about/', hello_world2, name="about")
     # re_path(r'', hello_world, name="home")
 ]
