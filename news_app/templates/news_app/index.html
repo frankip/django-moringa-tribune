@@ -9,8 +9,9 @@
     Hello, world!
   </h1>
   {% endif %}
-  <div class="col text-center">Column</div>
-  <div class="col text-center">Column</div>
-  <div class="col text-center">Column</div>
+  {% for article in articles %}
+
+  <div class="col text-center">{{ article.title }}</div>
+  {% endfor %}
 </div>
 {% endblock %}
