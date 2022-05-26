@@ -1,4 +1,7 @@
-{% extends 'news_app/base.html'%} {% block content%}
+{% extends 'news_app/base.html'%} 
+{% block content%}
+
+  <!-- titile -->
 <div class="row">
   {% if title %}
   <h1 class="text-uppercase fs-1 fw-bolder lh-lg .text-primary text-center">
@@ -9,9 +12,16 @@
     Hello, world!
   </h1>
   {% endif %}
+</div>
+  <!-- end title  -->
+
+  <!-- articles -->
+<div class="row">
   {% for article in articles %}
 
-  <div class="col text-center">{{ article.title }}</div>
+  <div class="col-lg-4 text-center">{{ article.title }}</div>
   {% endfor %}
 </div>
+
+  <!-- end article -->
 {% endblock %}

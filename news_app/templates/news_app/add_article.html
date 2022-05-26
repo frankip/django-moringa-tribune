@@ -1,0 +1,20 @@
+{% extends 'news_app/base.html'%} 
+
+{% block content%}
+
+ 
+ <!-- Forms -->
+  <div class="row">
+    <div class="col-lg-6">
+      <form method="POST" action="{% url 'add'%}">
+        {% csrf_token %}
+        {{ form.as_table }}
+
+      <button class="btn btn-success" type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- end forms -->
+
+{% endblock %}
+
