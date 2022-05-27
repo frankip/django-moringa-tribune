@@ -18,8 +18,23 @@
   <!-- articles -->
 <div class="row">
   {% for article in articles %}
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <h2 class="text-center"> {{ news_item.title }} </h2>
+          <p>{{ article.text}}</p>
+        </div>
+{% if article.article_image %}
+    <!--Display news Article images  -->
 
-  <div class="col-lg-4 text-center">{{ article.title }}</div>
+    {{ article.id }}
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img src="{{article.article_image.url}}" class="img-responsive" alt="Image">
+    </div>
+  {% else %}
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img src="https://via.placeholder.com/300.png/09f/fff" class="img-responsive" alt="Image">
+    </div>
+    {% endif %}
+
   {% endfor %}
 </div>
 

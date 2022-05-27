@@ -55,3 +55,14 @@ def add_articles(request):
             "form": form
         }
         return render(request, 'news_app/add_article.html', ctx)
+    
+    
+def single_article(request, article_id):
+    single_article  = Articles.fetch_single_article(article_id)
+    
+    print('single------------>', single_article)
+    ctx= {
+        "article_id": article_id,
+        "single_article": single_article
+    }
+    return render(request, 'news_app/single_article.html', ctx)
