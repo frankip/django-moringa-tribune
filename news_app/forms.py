@@ -9,4 +9,4 @@ class ArticleForms(ModelForm):
     
     class Meta:
         model = Articles
-        fields = ('editor', 'title', 'text',)
+        fields = ('editor', 'title', 'text','article_image')

@@ -1,0 +1,15 @@
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: auto;
+}
+
+.card {
+    max-height: 35rem;
+}
+.card-style{
+    max-height: 35rem;
+}
